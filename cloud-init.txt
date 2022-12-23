@@ -1,0 +1,32 @@
+#cloud-config
+users:
+ - default
+ - name: ablack
+   sudo: ALL=(ALL) NOPASSWD:ALL
+   lock_passwd: false
+   passwd: $6$ac9haWFv.A8ojqxr$3Kx3YoJBOf6dB7Yeo8bF6dnKVQNNzjSYq/qKJmsi0ii3dw7k/fumg0K/CS5HOx0sTRsB8kfRSrHtbajqiUWQm1
+   ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCqcUb5mlfcOq1PBNUZYETtzGwTCtFK85zqbUj3Hc4MN6Dnl7FAlv+28LVHpd4Tqh7lZcifUeDxk8Bv4Xtr76uqhNZW9JoCcnno5DLAVVjGJg/gG7cbMQScL76Ug03koJSPOCTHTfJjfIsJXyn6mlIaUHl7ZgrvWOy45E3rNcxTenyt23g6ekBdJZj6W5jyMsVocCUXwmlUt15iWBPjuXtS/debFCN/zPFiaF0Z4ctivqQsR84esZWCaVDLRibbbPA20NvW8K1Z3o86YZFZpzWDc8bqtf/CPNr4UTXI2NWXNBVIfzwVhYaPP24p8Ibo4g0oncHOKKKxS2/5DV2AKual ssh-key-2022-12-15
+
+package_upgrade: true
+
+packages:
+   - curl
+   - gcc
+   - openssl-devel
+   - bzip2-devel
+   - libffi-devel
+   - zlib-devel
+   - tar
+   - wget
+   - make
+
+runcmd:
+   - [cd, /tmp]
+   - [wget, "https://www.python.org/ftp/python/3.11.1/Python-3.11.1.tgz"]
+   - [tar, -xzf, Python-3.11.1.tgz, -C, /opt/]
+   - [cd, /opt/Python-3.11.1]
+   - [./configure]
+   - [make, -j, 2]
+   - [make, altinstall]
+   - [update-alternatives, --install, /usr/local/sbin/python, python3, /usr/local/bin/python3.11, 1]

@@ -1,0 +1,90 @@
+[
+  {
+    "bgpSessionConfig": {
+      "customerBgpAsn": "string",
+      "customerInterfaceIp": "string",
+      "customerInterfaceIpv6": "string",
+      "oracleInterfaceIp": "string",
+      "oracleInterfaceIpv6": "string"
+    },
+    "displayName": "string",
+    "dpdConfig": {
+      "dpdMode": "string",
+      "dpdTimeoutInSec": 0
+    },
+    "encryptionDomainConfig": {
+      "cpeTrafficSelector": [
+        "string",
+        "string"
+      ],
+      "oracleTrafficSelector": [
+        "string",
+        "string"
+      ]
+    },
+    "ikeVersion": "string",
+    "natTranslationEnabled": "string",
+    "oracleInitiation": "string",
+    "phaseOneConfig": {
+      "authenticationAlgorithm": "string",
+      "diffieHelmanGroup": "string",
+      "encryptionAlgorithm": "string",
+      "isCustomPhaseOneConfig": true,
+      "lifetimeInSeconds": 0
+    },
+    "phaseTwoConfig": {
+      "authenticationAlgorithm": "string",
+      "encryptionAlgorithm": "string",
+      "isCustomPhaseTwoConfig": true,
+      "isPfsEnabled": true,
+      "lifetimeInSeconds": 0,
+      "pfsDhGroup": "string"
+    },
+    "routing": "string",
+    "sharedSecret": "string"
+  },
+  {
+    "bgpSessionConfig": {
+      "customerBgpAsn": "string",
+      "customerInterfaceIp": "string",
+      "customerInterfaceIpv6": "string",
+      "oracleInterfaceIp": "string",
+      "oracleInterfaceIpv6": "string"
+    },
+    "displayName": "string",
+    "dpdConfig": {
+      "dpdMode": "string",
+      "dpdTimeoutInSec": 0
+    },
+    "encryptionDomainConfig": {
+      "cpeTrafficSelector": [
+        "string",
+        "string"
+      ],
+      "oracleTrafficSelector": [
+        "string",
+        "string"
+      ]
+    },
+    "ikeVersion": "string",
+    "natTranslationEnabled": "string",
+    "oracleInitiation": "string",
+    "phaseOneConfig": {
+      "authenticationAlgorithm": "string",
+      "diffieHelmanGroup": "string",
+      "encryptionAlgorithm": "string",
+      "isCustomPhaseOneConfig": true,
+      "lifetimeInSeconds": 0
+    },
+    "phaseTwoConfig": {
+      "authenticationAlgorithm": "string",
+      "encryptionAlgorithm": "string",
+      "isCustomPhaseTwoConfig": true,
+      "isPfsEnabled": true,
+      "lifetimeInSeconds": 0,
+      "pfsDhGroup": "string"
+    },
+    "routing": "string",
+    "sharedSecret": "string"
+  }
+]
